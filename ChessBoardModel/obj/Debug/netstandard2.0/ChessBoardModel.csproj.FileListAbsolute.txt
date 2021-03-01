@@ -1,0 +1,9 @@
+D:\Work\repos\ChessBoardModel\bin\Debug\netstandard2.0\ChessBoardModel.deps.json
+D:\Work\repos\ChessBoardModel\bin\Debug\netstandard2.0\ChessBoardModel.dll
+D:\Work\repos\ChessBoardModel\bin\Debug\netstandard2.0\ChessBoardModel.pdb
+D:\Work\repos\ChessBoardModel\obj\Debug\netstandard2.0\ChessBoardModel.csprojAssemblyReference.cache
+D:\Work\repos\ChessBoardModel\obj\Debug\netstandard2.0\ChessBoardModel.AssemblyInfoInputs.cache
+D:\Work\repos\ChessBoardModel\obj\Debug\netstandard2.0\ChessBoardModel.AssemblyInfo.cs
+D:\Work\repos\ChessBoardModel\obj\Debug\netstandard2.0\ChessBoardModel.csproj.CoreCompileInputs.cache
+D:\Work\repos\ChessBoardModel\obj\Debug\netstandard2.0\ChessBoardModel.dll
+D:\Work\repos\ChessBoardModel\obj\Debug\netstandard2.0\ChessBoardModel.pdb
