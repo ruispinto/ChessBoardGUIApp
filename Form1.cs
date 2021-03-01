@@ -52,7 +52,7 @@ namespace ChessBoardGUIApp
                     // set the location of each new button
                     btnGrid[i, j].Location = new Point(i * buttonSize, j * buttonSize);
 
-                    btnGrid[i, j].Text = i + " | " + j;
+                    //btnGrid[i, j].Text = i + " | " + j;
                     btnGrid[i, j].Tag = new Point(i, j);
 
                 }
@@ -68,28 +68,16 @@ namespace ChessBoardGUIApp
             int x = location.X;
             int y = location.Y;
 
-            //int option = 0;
-
             Cell currentCell = myBoard.theGrid[x, y];
 
-            /*
-            // depending the option chosen it 'translates' to int
-            if (comboBox1.SelectedText == "Knight")
-                option = 1;
-            else if (comboBox1.SelectedText == "King")
-                option = 2;
-            else if (comboBox1.SelectedText == "Rook")
-                option = 3;
-            else if (comboBox1.SelectedText == "Bishop")
-                option = 4;
-            else if (comboBox1.SelectedText == "Queen")
-                option = 5;
-            else
-                option = 6;
-            */
+            if (comboBox1.SelectedItem == null)
+            {
+                comboBox1.SelectedIndex = 0;
+                //comboBox1.SelectedItem = "King";
+            }
 
             // determine legal next moves
-            myBoard.MarkNextLegalMoves(currentCell, comboBox1.SelectedIndex);
+            myBoard.MarkNextLegalMoves(currentCell, comboBox1.SelectedIndex + 1);
 
             // update the text on each button
             for (int i = 0; i < myBoard.Size; i++)
@@ -97,20 +85,19 @@ namespace ChessBoardGUIApp
                 for (int j = 0; j < myBoard.Size; j++)
                 {
                     btnGrid[i, j].Text = "";
+
                     if (myBoard.theGrid[i, j].LegalNexMove == true)
                     {
                         btnGrid[i, j].Text = "Legal";
                     }
                     else if (myBoard.theGrid[i, j].CurrentlyOccupied == true)
                     {
-                        //btnGrid[i, j].Text = comboBox1.SelectedItem.ToString();
-                        btnGrid[i, j].Text = "Knight";
+                        int numOption = comboBox1.SelectedIndex + 1;
+                        btnGrid[i, j].Text = comboBox1.SelectedItem.ToString();
 
                     }
                 }
             }
-
-            // MessageBox.Show("You clicked the button " + x + "|" + y);
         }
 
         private void button1_Click(object sender, EventArgs e)
